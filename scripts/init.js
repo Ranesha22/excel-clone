@@ -1,6 +1,10 @@
 //initializing grid
 
 // top row
+Sentry.init({
+    dsn: "https://9c290a5f5c76ce7da39b20da3956ab59@o4507045655805952.ingest.us.sentry.io/4507045670223872",
+  });
+  
 let topRowStr = "";
 for (let i = 0; i < 26; i++) {
     topRowStr += `<div class='grid__col grid__col--top'>${String.fromCharCode(
@@ -8,6 +12,9 @@ for (let i = 0; i < 26; i++) {
     )}</div>`;
 }
 grid_topRow.innerHTML = topRowStr;
+setTimeout(()=>{
+    throw new Error("Sentry test")
+},5000)
 
 // left col
 let leftColBox = "";

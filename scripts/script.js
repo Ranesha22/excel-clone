@@ -13,6 +13,7 @@ const handleCellHeight = function (cell) {
     if (cellHeight != leftBoxHeight) {
         leftBox.style.height = cellHeight + "px";
     }
+
 };
 
 const updateAddressBox = function (cell) {
